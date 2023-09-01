@@ -114,7 +114,7 @@ public class MyPoint {
                 angle = this.x > 0.0 ? 0.0 : 180.0;
                 break;
             case 6:
-                angle = this.y > 0.0 ? 90.0 : 180.0;
+                angle = this.y > 0.0 ? 90.0 : 270.0;
                 break;
         }
         
