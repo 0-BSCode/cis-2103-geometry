@@ -95,8 +95,27 @@ public class MyPoint {
     public double getAngle() {
         double x_coord = Math.abs(this.x);
         double y_coord = Math.abs(this.y);
-        double angle_rad = Math.atan(y_coord / x_coord);
-        return angle_rad * (180.0 / Math.PI);
+        double angle = Math.toDegrees(Math.atan(y_coord / x_coord));
+
+        switch (this.getQuadrant()) {
+            case 2:
+                angle += 90;
+                break;
+            case 3:
+                angle += 180;
+                break;
+            case 4:
+                angle += 270;
+                break;
+            case 5:
+                angle = this.x > 0.0 ? 0.0 : 180.0;
+                break;
+            case 6:
+                angle = this.y > 0.0 ? 90.0 : 180.0;
+                break;
+        }
+        
+        return angle;
     }
     
     public void displayPoint() {
