@@ -73,7 +73,7 @@ public class MyPoint {
             } else if (this.y < 0) {
                 res = 4;
             } else {
-                res = 6;
+                res = 5;
             }
         } else if (this.x < 0) {
             if (this.y > 0) {
@@ -81,11 +81,11 @@ public class MyPoint {
             } else if (this.y < 0) {
                 res = 3;
             } else {
-                res = 6;
+                res = 5;
             }
         } else {
             if (this.y != 0) {
-                res = 5;
+                res = 6;
             }
         }
         
