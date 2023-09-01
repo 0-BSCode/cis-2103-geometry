@@ -98,6 +98,9 @@ public class MyPoint {
         double angle = Math.toDegrees(Math.atan(y_coord / x_coord));
 
         switch (this.getQuadrant()) {
+            case 0:
+                angle = 0.0;
+                break;
             case 2:
                 angle += 90;
                 break;
