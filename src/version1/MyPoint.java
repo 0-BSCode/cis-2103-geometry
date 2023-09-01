@@ -102,13 +102,13 @@ public class MyPoint {
                 angle = 0.0;
                 break;
             case 2:
-                angle += 90;
+                angle = 180 - angle;
                 break;
             case 3:
-                angle += 180;
+                angle = 180 + angle;
                 break;
             case 4:
-                angle += 270;
+                angle = 360 - angle;
                 break;
             case 5:
                 angle = this.x > 0.0 ? 0.0 : 180.0;
